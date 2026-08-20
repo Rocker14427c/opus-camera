@@ -1,0 +1,33 @@
+# ============================================
+# Camera-related lines from stock RUI4 build.prop
+# (RMX3430export_11_F.23 / Android 13)
+# 
+# Reference for debugging camera issues
+# ============================================
+
+# From system build.prop:
+ro.camera.sound.forced=0
+
+# From vendor build.prop / default.prop (inferred):
+ro.vendor.camera.hal3.enable=1
+persist.vendor.camera.hal3.enable=1
+
+# Key system properties from stock:
+
+# SELinux context for camera:
+# (The app needs: u:object_r:app_data_file:s0:c512,c768)
+
+# Camera service class:
+# persist.vendor.camera.service.class=oplus
+
+# MediaTek ISP config:
+# vendor.isp.tnr.enable=1
+# vendor.isp.mfnr.enable=1
+# vendor.isp.hdr.enable=1
+
+# Vendor camera prop references:
+# ro.vendor.camera.camera2.portability=1
+
+# These were set in the stock OplusCamera manifest:
+# <uses-library android:name="oplus-camera-framework"/>
+# <uses-library android:name="com.oppo.camera"/>

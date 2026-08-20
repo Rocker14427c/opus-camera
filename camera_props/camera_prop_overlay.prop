@@ -1,0 +1,54 @@
+# ============================================
+# Opus Camera - Camera Prop Overlay
+# 
+# These properties were extracted from stock
+# RUI4 F.23 build.prop (RMX3430) and are needed
+# for the camera to function properly.
+# 
+# Add these to your custom ROM's build.prop
+# or use the KernelSU module's post-fs-data.sh
+# ============================================
+
+# --- Camera2 API ---
+persist.camera.HAL3.enable=1
+persist.vendor.camera.HAL3.enable=1
+persist.camera.preview.ubwc=0
+persist.vendor.camera.preview.ubwc=0
+
+# --- MTK Specific Camera Props ---
+vendor.camera.hal1.packagelist=OplusCamera
+vendor.camera.mdp.cz.enable=1
+vendor.camera.isp_nr3dc_enable=1
+ro.camera.sound.forced=0
+
+# --- Image Quality ---
+persist.camera.dedicated.feedback=0
+persist.vendor.camera.dedicated.feedback=0
+persist.camera.imglibcore.dump=0
+persist.vendor.camera.imglibcore.dump=0
+
+# --- Video Recording ---
+persist.camera.max.preview.fps=30
+persist.vendor.camera.max.preview.fps=30
+media.camera.ts.monotonic=1
+persist.vendor.camera.ts.monotonic=1
+
+# --- Oplus Specific ---
+ro.oplus.camera.use_subsystem=1
+persist.vendor.oplus.camera.support_ai_scene=1
+persist.vendor.oplus.camera.support_hdr=1
+persist.vendor.oplus.camera.support_beauty=1
+
+# --- Memory Management ---
+persist.vendor.camera.mem.size=32
+persist.vendor.camera.ion.size=16
+
+# --- Debugging (disable for production) ---
+# persist.camera2.global.debug=1
+# persist.vendor.camera.engine.log=0
+
+# --- Sensor Info (RMX3430 - Samsung S5KJN1 50MP) ---
+persist.vendor.camera.sensor.back=50mp_s5kjn1
+persist.vendor.camera.sensor.front=8mp_gc8034
+persist.vendor.camera.sensor.macro=2mp_gc02m1
+persist.vendor.camera.sensor.depth=2mp_ov02b

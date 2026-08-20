@@ -1,0 +1,52 @@
+# ============================================
+# Opus Camera - Required Files Checklist
+# 
+# These files MUST be extracted from the stock
+# RUI4 firmware for the camera port to work.
+# ============================================
+
+# --- Camera App ---
+system/app/OplusCamera/OplusCamera.apk          # MAIN: The camera app
+system/app/OplusEngineerCamera/OplusEngineerCamera.apk  # Camera engine service
+system/app/OplusLens/OplusLens.apk                      # Lens switching (optional)
+
+# --- Framework (CRITICAL) ---
+system/framework/oplus-camera-framework.jar      # Oppo camera framework
+system/framework/com.oppo.camera.jar             # Camera helper classes
+system/framework/com.oppo.services.jar           # Oppo services
+system/framework/oplus-framework.jar             # Oplus core framework
+system/framework/oplus-aps-framework.jar         # APS (AI Photo Suggestions)
+
+# --- System Libraries (64-bit) ---
+system/lib64/libcamera_client.so                 # Camera client library
+system/lib64/libcameracustom.so                  # Camera customization
+system/lib64/libcameraprofile.so                 # Camera profiling
+system/lib64/libcameraservice.so                 # Camera service
+system/lib64/liboppocamera.so                    # Oppo camera library
+system/lib64/liboppocamera3.so                   # Oppo camera3 HAL
+system/lib64/libjni_oppocamera.so                # JNI bridge for camera
+system/lib64/libjni_camera3.so                   # JNI for camera3
+system/lib64/libMial.so                          # MediaTek Image Algorithm Library
+system/lib64/libMialcontent.so                   # MTK image content
+system/lib64/libMialdrv.so                       # MTK image driver
+system/lib64/libMialpipe.so                      # MTK image pipeline
+system/lib64/libMialscenario.so                  # MTK image scenario
+system/lib64/libMialutility.so                   # MTK image utility
+
+# --- Vendor Camera HAL ---
+vendor/lib64/camera.default.so                   # Camera HAL default
+vendor/lib64/camera.mt6768.so                    # MT6768/Helio G85 camera HAL
+vendor/lib64/libcamdrv.so                        # Camera driver
+vendor/lib64/libmtkcamera.so                     # MTK camera core
+vendor/lib64/libmtkcamera_client.so              # MTK camera client
+vendor/lib64/libcamera2ndk.so                    # Camera2 NDK
+vendor/lib64/libmtk_jni_camera.so                # MTK JNI camera
+
+# --- Vendor Camera Configs ---
+vendor/etc/camera/*                              # ALL files in this directory
+                                                 # (sensor calibration, tuning files)
+
+# --- Permissions ---
+system/etc/permissions/privapp-permissions-oppo.xml    # Oppo priv-app permissions
+system/etc/permissions/oplus-camera-permissions.xml    # Camera-specific permissions
+system/etc/permissions/oplus.framework.xml             # Oplus framework permissions

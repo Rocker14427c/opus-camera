@@ -1,0 +1,6 @@
+id=oplus_camera_port
+name=Opus Camera - OplusCamera Port for RMX3430
+version=v1.0-alpha
+versionCode=1
+author=rocker14427c
+description=Port of Realme Narzo 50a (RMX3430) stock RUI4 OplusCamera to AOSP custom ROMs. Includes camera app, framework libs, and MTK HAL configs. Target: Axion 2.7 / KernelSU.
